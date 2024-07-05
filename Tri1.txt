@@ -1,0 +1,129 @@
+write a shell script to accept a few numbers as command line arguments. show the sum of output number
+
+
+#!/bin/bash
+
+sum=0
+
+for number in "$@"
+do
+    sum=$(($sum + $number))
+done
+
+echo "The sum of the numbers is: $sum"
+
+
+
+
+
+write a shell script to accept a few numbers as command line arguments. show the output number
+
+
+
+
+#!/bin/bash
+
+echo "The numbers entered are:"
+
+for num in "$@"
+do
+    echo "$num"
+done
+
+run to execute:
+$ ./show_numbers.sh 10 20 30 40
+The numbers entered are:
+10
+20
+30
+40
+
+
+--------------------------------------------------------------------
+#!/bin/bash
+
+echo "Enter a number to calculate its factorial:"
+read num
+
+factorial=1
+
+    for (( i=1; i<=num; i++ ))
+    do
+        factorial=$(( factorial * i ))
+    done
+    echo "Factorial of $num is: $factorial"
+
+----------------------------------------------------
+
+echo "Enter a number"
+
+# Read the number
+read num
+
+fact=1
+
+for((i=2;i<=num;i++))
+{
+  fact=$((fact * i))
+}
+
+echo $fact
+-------------------------------------------
+
+SNEHAL@DESKTOP-85TBH1T MINGW64 ~/Desktop (master)
+$ vi fact123.sh
+
+SNEHAL@DESKTOP-85TBH1T MINGW64 ~/Desktop (master)
+$ ./fact123.sh
+Enter a number to calculate its factorial:
+5
+Factorial of 5 is: 120
+---------------------------------------------------------------------
+
+Git commands
+1.git init
+2.git add Main.java
+3.git commit -m "Initial commit"
+
+Step 3: Create a new repository on GitHub.
+Go to GitHub and create a new repository named MyJavaProject.
+
+Step 4: Link your local repository to the GitHub repository and push the code.
+4.git remote add origin https://github.com/yourusername/MyJavaProject.git
+5.git push -u origin main
+6.git clone https://github.com/yourusername/MyJavaProject.git
+7.cd MyJavaProject //projectname
+8.git checkout -b slave
+9.git branch
+//Step 1: Create a new Java file named Greeting.java.
+
+//// Main.java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        Greeting.greet();
+    }
+}
+
+10.git add Greeting.java Main.java
+11.git commit -m "Add Greeting class and update Main"
+12.git push origin slave
+/////
+8. Review the Changes on GitHub and Merge the Branch into the Main Branch
+Step 1: Go to your GitHub repository page.
+
+Step 2: Create a pull request for the slave branch into the main branch.
+
+Click on "Compare & pull request".
+Review the changes and create the pull request.
+Step 3: Merge the pull request.
+
+Once the pull request is created, click on "Merge pull request".
+Confirm the merge.
+Step 4: Pull the latest changes to your local repository.
+/////
+git checkout main
+git pull origin main
+
+
+
